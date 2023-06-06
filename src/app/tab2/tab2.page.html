@@ -1,17 +1,25 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <div>
+    <ion-fab  aria-label="Favorite">
+      Nuevo Medición
+      <ion-fab-button size="large" color="warning"  aria-label="Favorite">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-list side="end">
+        <ion-fab-button>
+          <ion-icon name="document"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button>
+          <ion-icon name="color-palette"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button>
+          <ion-icon name="globe"></ion-icon>
+        </ion-fab-button>
+      </ion-fab-list>
+    </ion-fab>
+  </div>
+
 </ion-content>
