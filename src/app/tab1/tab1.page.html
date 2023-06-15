@@ -1,77 +1,85 @@
+<ion-content>
 
+<!--   Titulo de último ckhekeo 
+  2. Agregar Interacción que muestre lpm 
+  3. Medición si es moderado o qué 
+  4. Organizar bien 
+  5. Agregar sólo la temperatura en grádico circular o interactivo.
+  6. Agregar un botton que muestrea agregar nueva medición 
+  7. Popup -agregar nueva medición 
+  8-Sección - medición -ver todas las mediciones anterirores -->
 
-
-
-
-<ion-content >
   
   <ion-card color="dark">
-    <ion-card-header >
+    <ion-card-header>
       Conexión segura
       <ion-button color="success" size="small">
-       
+
         <ion-icon name="wifi-outline"></ion-icon>
-         Activo
+        Activo
       </ion-button>
     </ion-card-header>
-    
+
   </ion-card>
 
-  <ion-card color="dark"  >
-    <ion-card-header >
+  <ion-card color="dark">
+    <ion-card-header>
       <ion-button color="danger" size="small">
-       
+
         <ion-icon name="heart-half-outline"></ion-icon>
-         Ritmo Cardiaco
+        Ritmo Cardiaco
       </ion-button>
     </ion-card-header>
-    <ion-card-content> 
+    <ion-card-content>
       <ion-content>
-       
+
       </ion-content>
-      
- 
-        <canvas #heartRateCanvas></canvas>
-     
-      
+
+
+      <canvas #heartRateCanvas></canvas>
+
+
     </ion-card-content>
   </ion-card>
 
-
- 
   
-    <div>
-     
 
-      <ion-card color="dark"  >
-        <ion-card-header >
-          <ion-button color="danger" size="small">
-           
-            <ion-icon name="thermometer-outline"></ion-icon>
-             Temperatura
-          </ion-button>
-        </ion-card-header>
-        <ion-card-content> 
-          <ion-content>
-           
-          </ion-content>
-          
-     
-          <canvas #temperatureCanvas style="background-color: aliceblue;"></canvas>
-         
-          
-        </ion-card-content>
-      </ion-card>
-      
-    </div>
-      
- 
-    
-       
-    
-     
-      
-    
+
+
+  <div>
+
+
+    <ion-card color="dark">
+
+      <ion-card-header>
+        <ion-button color="danger" size="small">
+
+          <ion-icon name="thermometer-outline"></ion-icon>
+          Temperatura
+        </ion-button>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-content>
+
+        </ion-content>
+
+
+        <canvas #temperatureCanvas style="background-color: aliceblue;"></canvas>
+
+
+      </ion-card-content>
+    </ion-card>
+
+  </div>
+
+
+
+
+
+
+
+
 
 
 

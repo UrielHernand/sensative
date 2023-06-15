@@ -7,6 +7,7 @@ import { Chart, registerables  } from 'chart.js';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page implements OnInit {
+
   @ViewChild('heartRateCanvas', { static: true }) heartRateCanvas! : ElementRef;
   heartRateChart!: Chart;
 
@@ -15,11 +16,14 @@ export class Tab1Page implements OnInit {
   temperatureChart!: Chart;
 
   ngOnInit() {
+    
     Chart.register(...registerables);
+
     this.createHeartRateChart();
 
     this.createTemperatureChart();
   }
+
 
   createHeartRateChart() {
     const heartRateCanvasElement = this.heartRateCanvas.nativeElement;
