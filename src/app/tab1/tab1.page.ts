@@ -34,7 +34,7 @@ export class Tab1Page implements OnInit {
 
     this.createHeartRateChart();
 
-    this.createTemperatureChart();
+  
   
     
   }

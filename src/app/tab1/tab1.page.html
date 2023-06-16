@@ -1,4 +1,4 @@
-<ion-content>
+<ion-content >
   <!--   Titulo de último ckhekeo 
   2. Agregar Interacción que muestre lpm 
   3. Medición si es moderado o qué 
@@ -7,10 +7,10 @@
   6. Agregar un botton que muestrea agregar nueva medición 
   7. Popup -agregar nueva medición 
   8-Sección - medición -ver todas las mediciones anterirores -->
-
+<div class="container">
   <ion-card color="dark">
     <ion-card-header>
-      Conexión segura
+    
       <ion-button color="success" size="small">
         <ion-icon name="wifi-outline"></ion-icon>
         Activo
@@ -18,10 +18,12 @@
     </ion-card-header>
   </ion-card>
 
+ 
+
 <div>
   <ion-card color="dark">
     <ion-card-header class="card">
-      <ion-card-title style="color: black">Última medición 🖇</ion-card-title>
+      <ion-card-title style="color: black">Última Medición 🖇</ion-card-title>
     </ion-card-header>
 
     <ion-card-header>
@@ -42,23 +44,22 @@
     </ion-card-content>
   </ion-card>
 
+  <div class="weather-card">
+    <div class="weather-icon">
+      <ion-icon name="thermometer-outline"></ion-icon>
+    </div>
+    <div class="weather-info">
+      <h4 class="temperature">24 °C </h4>
+      <p class="weather-description">Normal</p>
+    </div>
+  </div>
+
 </div>
  
 
-  <div>
-    <ion-card color="dark">
-      <ion-card-header>
-        <ion-button color="danger" size="small">
-          <ion-icon name="thermometer-outline"></ion-icon>
-          Temperatura
-        </ion-button>
-      </ion-card-header>
 
-      <ion-card-content>
-        <ion-content> </ion-content>
 
-        <canvas #temperatureCanvas style="background-color: aliceblue"></canvas>
-      </ion-card-content>
-    </ion-card>
-  </div>
+
+
+</div>
 </ion-content>
