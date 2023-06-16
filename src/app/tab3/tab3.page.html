@@ -1,17 +1,56 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <ion-content class="ion-padding">
+
+    <ion-card color="dark">
+      <img alt="Silhouette of mountains" src="https://img.freepik.com/vector-premium/pulso-cardiaco-linea-latidos-corazon-cardiograma-colores-rojo-blanco-hermosa-atencion-medica-antecedentes-medicos-diseno-moderno-simple-icono-signo-o-logotipo-ilustracion-estilo-plano_207561-11.jpg" />
+      <ion-card-header>
+        <ion-card-title></ion-card-title>
+        <ion-card-subtitle>💖La salud es primero</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>
+       El checkeo preventivo es muy importante!
+      </ion-card-content>
+    </ion-card>
+
+    <ion-button id="open-modal" expand="block" color="danger">Nueva medición</ion-button>
+    <p>{{ message }}</p>
+    <ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar>
+            <ion-buttons slot="start">
+              <ion-button (click)="cancel()">Cancel</ion-button>
+            </ion-buttons>
+            <ion-title>Medición</ion-title>
+            <ion-buttons slot="end">
+              <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+
+          <ion-item>
+            <ion-label position="stacked">Nombre </ion-label>
+            <ion-input type="text" placeholder="Your name" [(ngModel)]="name"></ion-input>
+          </ion-item>
+
+      
+        
+
+          <ion-item>
+            <ion-label position="stacked">¿Qué estás realizando?</ion-label>
+            <ion-input type="text" placeholder="Your name" [(ngModel)]="name"></ion-input>
+          </ion-item>
+
+
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+  </ion-content>
+
+ 
 </ion-content>

@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { Chart, registerables  } from 'chart.js';
+
+import { Chart, registerables} from 'chart.js';
+
 
 @Component({
   selector: 'app-tab1',
@@ -15,6 +17,17 @@ export class Tab1Page implements OnInit {
   @ViewChild('temperatureCanvas', { static: true }) temperatureCanvas!: ElementRef;
   temperatureChart!: Chart;
 
+
+
+
+  
+
+  constructor() {
+  
+  
+  }
+
+
   ngOnInit() {
     
     Chart.register(...registerables);
@@ -22,6 +35,8 @@ export class Tab1Page implements OnInit {
     this.createHeartRateChart();
 
     this.createTemperatureChart();
+  
+    
   }
 
 
@@ -32,9 +47,9 @@ export class Tab1Page implements OnInit {
       data: {
         labels: ['10S', '20S', '30S', '40S', '50S', '60S'],
         datasets: [{
-          label: 'Moderado',
-          data: [70, 75, 80, 85, 90, 95],
-          borderColor: '#36A2EB',
+          label: 'Moderado ',
+          data: [10, 35, 50, 75, 90, 100],
+          borderColor: 'red',
           backgroundColor: 'transparent'
         }]
       },
@@ -54,10 +69,10 @@ export class Tab1Page implements OnInit {
     this.temperatureChart = new Chart(temperatureCanvasElement, {
       type: 'bar',
       data: {
-        labels: ['10s', '20s', '30s', '40s', '50s', '60s'],
+        labels: ['0','60s'],
         datasets: [{
-          label: 'Temperatura',
-          data: [18, 20, 22, 25, 28, 30],
+        label: '30 C°',
+          data: [0,30],
           backgroundColor: '#FF6384',
           borderColor: '#FF6384',
           borderWidth: 1
@@ -73,6 +88,8 @@ export class Tab1Page implements OnInit {
       }
     });
   }
+
+ 
 
 
 
