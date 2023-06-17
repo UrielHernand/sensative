@@ -1,6 +1,6 @@
 
 ion-tabs,ion-toolbar,ion-tab-button,ion-header{
-  --ion-background-color: #67123A;
+  --ion-background-color: #faf6f8;
   --ion-color-primary: white;
   background-color: #67123A;
 }
@@ -9,5 +9,8 @@ ion-toolbar {
   
     background-color: #67123A;
     --background:#67123A;
+  }
+  ion-content {
+    --ion-color-primary: white;
   }
   

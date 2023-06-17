@@ -1,0 +1,24 @@
+.container{
+    background-image: url('https://img.freepik.com/vector-gratis/fondo-monocromatico-blanco-estilo-papel_23-2148996464.jpg?w=2000');
+}
+ion-content{
+    --background-color: aliceblue;
+}
+ion-modal, ion-button , ion-toolbar, ion-header, ion-buttons{
+    --ion-background-color : #faf6f8;
+  
+}
+ion-loading{
+     --background: rgb(248, 244, 244);
+    --height:10%;
+    --width:60%;
+    --spinner-color:rgb(245, 11, 11);
+    color: rgb(19, 17, 17);
+
+  
+    
+    background-image: url('https://cdn.dribbble.com/users/678801/screenshots/3562290/heart.gif');
+    background-size: cover;
+  background-clip: content-box;
+  background-position: center;
+}
