@@ -3,7 +3,7 @@ ion-content{
 }
 
 .container{
- background-color: rgb(230, 221, 221);
+ background-color: rgb(255, 255, 255);
 }
 
 
@@ -65,6 +65,8 @@ ion-icon.icon-heart{
   }
   #heart-rate {
     margin-left: 120px;
+    font-size: large;
+    padding-top: 20px;
   }
   
   @keyframes heartbeat {

@@ -32,7 +32,7 @@
             <ion-title>Medición</ion-title>
             <ion-buttons slot="end" >
               <ion-button (click)="confirm()" [strong]="true" id="open-loading">Confirm</ion-button>
-              <ion-loading class="custom-loading" trigger="open-loading" message="Medición en curso" [duration]="10000" color="dark" spinner="dots"></ion-loading>
+              <ion-loading class="custom-loading" trigger="open-loading" message="Medición en curso" [duration]="60205" color="dark" spinner="dots"></ion-loading>
             </ion-buttons>
           </ion-toolbar>
         </ion-header>
@@ -45,8 +45,8 @@
           </ion-item>
 
           <ion-item   color="dark">
-            <ion-label position="stacked" color="danger">Nombre </ion-label>
-            <ion-input type="text" placeholder="Your name" [(ngModel)]="name" ></ion-input>
+            <ion-label position="stacked" color="danger" required>Nombre </ion-label>
+            <ion-input type="text" placeholder="Nombre" [(ngModel)]="name" ></ion-input>
           </ion-item>
 
         

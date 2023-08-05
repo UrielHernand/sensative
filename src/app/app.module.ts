@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { Chart } from 'chart.js';
 
 
+
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,],

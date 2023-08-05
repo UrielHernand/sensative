@@ -8,22 +8,13 @@
   7. Popup -agregar nueva medición 
   8-Sección - medición -ver todas las mediciones anterirores -->
 <div class="container">
-  <ion-card color="dark">
-    <ion-card-header>
-    
-      <ion-button color="success" size="small">
-        <ion-icon name="wifi-outline"></ion-icon>
-        Activo
-      </ion-button>
-    </ion-card-header>
-  </ion-card>
 
  
 
 <div>
   <ion-card color="dark">
     <ion-card-header class="card">
-      <ion-card-title style="color: black">Última Medición 🖇</ion-card-title>
+      <ion-card-title style="color: black">Última Medición</ion-card-title>
     </ion-card-header>
 
     <ion-card-header>
@@ -33,26 +24,32 @@
       </ion-button>
     </ion-card-header>
 
-    <ion-card-content>
-      <div class="heart-container">
+    <ion-card-content >
+      <div class="heart-container" *ngIf="transformRegistros && transformRegistros.length > 0" >
+       
         <div class="heart"> <ion-icon name="heart-circle-outline"  class="icon-heart"></ion-icon></div>
-        <h3 id="heart-rate"><br> <b>100 latidos por minuto</b></h3>
+        <h5 id="heart-rate"><br> <b>{{ transformRegistros[transformRegistros.length - 1].pulsos }}LPM</b></h5>
       </div>
+
+      <ion-card color="dark">
+        <ion-card-header>
+           <b> {{ transformRegistros[transformRegistros.length - 1].nombre_paciente}}</b>
+          <ion-card-subtitle>Resultado: {{ transformRegistros[transformRegistros.length - 1].resultado }}</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content>
+        <b> {{ transformRegistros[transformRegistros.length - 1].fecha_medicion }}</b>
+          {{ transformRegistros[transformRegistros.length - 1].descripcion}}
+          
+        </ion-card-content>
+      </ion-card>
       
 
       <canvas #heartRateCanvas></canvas>
     </ion-card-content>
   </ion-card>
 
-  <div class="weather-card">
-    <div class="weather-icon">
-      <ion-icon name="thermometer-outline"></ion-icon>
-    </div>
-    <div class="weather-info">
-      <h4 class="temperature">24 °C </h4>
-      <p class="weather-description">Normal</p>
-    </div>
-  </div>
+
 
 </div>
  

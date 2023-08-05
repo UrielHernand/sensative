@@ -14,11 +14,8 @@ ion-loading{
     --width:60%;
     --spinner-color:rgb(245, 11, 11);
     color: rgb(19, 17, 17);
-
-  
-    
     background-image: url('https://cdn.dribbble.com/users/678801/screenshots/3562290/heart.gif');
     background-size: cover;
-  background-clip: content-box;
-  background-position: center;
+    background-clip: content-box;
+    background-position: center;
 }

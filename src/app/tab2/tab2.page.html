@@ -3,82 +3,43 @@
     <ion-card-header class="card">
       <ion-card-title style="color: black">Últimas mediciones 🖇</ion-card-title>
     </ion-card-header>
-    <ion-card-content class="card">
-
-      <section>
-        <p>12/06/2023 11:45 am</p>
-        <ion-item color="danger">
-        
-          <ion-icon slot="start" name="heart-half-outline"></ion-icon>
-          <ion-label>150LPM</ion-label>
-          <ion-icon name="thermometer-outline"></ion-icon>
-          <ion-label>30°C</ion-label>
-        </ion-item>
+    <ion-card-content  *ngFor="let registro of transformRegistros" style="background-color: white;">
+      <div >
+       
 
 
-      </section>
     
-      <hr />
-
-      <section>
-        <p>12/06/2023 10:34 am</p>
-        <ion-item color="danger">
-        
-          <ion-icon slot="start" name="heart-half-outline"></ion-icon>
-          <ion-label>150LPM</ion-label>
-          <ion-icon name="thermometer-outline"></ion-icon>
-          <ion-label>30°C</ion-label>
-        </ion-item>
-
-
-      </section>
     
+      <ion-list color="dark">
+        <ion-item color="dark">
+
+          <ion-label> <ion-icon name="calendar-outline" size="small"></ion-icon> {{registro.fecha_medicion }} </ion-label>
+          
+        </ion-item>
+
+
+      </ion-list>
+      <section color="dark">
+        <ion-item color="danger">
+        
+        
+          
+          <ion-label>  {{registro.descripcion}}</ion-label>
+         
+        </ion-item>
+   
+        <ion-item color="danger">
+        
+          <ion-icon slot="start" name="heart-half-outline"></ion-icon>
+          <ion-label>{{registro.pulsos}}LPM</ion-label>
+          <ion-icon name="square-outline"></ion-icon>
+          <ion-label>{{registro.resultado}}</ion-label>
+        </ion-item>
+
+
+      </section>
+    </div>
       <hr />
-
-      <section>
-        <p>12/06/2023 10:34 am</p>
-        <ion-item color="danger">
-        
-          <ion-icon slot="start" name="heart-half-outline"></ion-icon>
-          <ion-label>150LPM</ion-label>
-          <ion-icon name="thermometer-outline"></ion-icon>
-          <ion-label>30°C</ion-label>
-        </ion-item>
-
-
-      </section>
-
-
-      <hr />
-
-      <section>
-        <p>12/06/2023 10:34 am</p>
-        <ion-item color="danger">
-        
-          <ion-icon slot="start" name="heart-half-outline"></ion-icon>
-          <ion-label>150LPM</ion-label>
-          <ion-icon name="thermometer-outline"></ion-icon>
-          <ion-label>30°C</ion-label>
-        </ion-item>
-
-
-      </section>
-      hr}
-      <section>
-        <p>12/06/2023 10:34 am</p>
-        <ion-item color="danger">
-        
-          <ion-icon slot="start" name="heart-half-outline"></ion-icon>
-          <ion-label>150LPM</ion-label>
-          <ion-icon name="thermometer-outline"></ion-icon>
-          <ion-label>30°C</ion-label>
-        </ion-item>
-
-
-      </section>
-      
-     
-
 
     </ion-card-content>
   </ion-card>
