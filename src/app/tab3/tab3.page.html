@@ -3,11 +3,22 @@
 <ion-content [fullscreen]="true" >
 
   <ion-content class="ion-padding" >
+   
+  
+    
+            
+          
+          
+     
+   
     <div >
+    
+  
+  
 
    
 
-    <ion-card color="dark">
+    <ion-card style="background-color: white; color:black">
       <img alt="Silhouette of mountains" src="https://img.freepik.com/vector-premium/pulso-cardiaco-linea-latidos-corazon-cardiograma-colores-rojo-blanco-hermosa-atencion-medica-antecedentes-medicos-diseno-moderno-simple-icono-signo-o-logotipo-ilustracion-estilo-plano_207561-11.jpg" />
       <ion-card-header>
         <ion-card-title></ion-card-title>
@@ -19,6 +30,8 @@
       </ion-card-content>
       <ion-button id="open-modal" expand="block" color="danger">Nueva medición</ion-button>
     </ion-card>
+
+   
 
     
     <p>{{ message }}</p>
@@ -91,6 +104,12 @@
     </ion-modal>
   </div>
   </ion-content>
+  <div class="help-container">
+    <button class="help-button"  (click)="showHelp()">
+      <span class="help-icon">?</span>
+    </button>
+    <div class="help-text">¿Necesitas ayuda?</div>
+  </div>
 
  
 </ion-content>

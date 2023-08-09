@@ -34,7 +34,8 @@ ion-card {
     margin: auto;
     position: relative;
     animation: heartbeat 1s infinite;
-    background-color: rgb(248, 246, 246);
+    background-color: white;
+    color: black;
 
 
   }
@@ -115,6 +116,7 @@ ion-icon.icon-heart{
     font-size: 16px;
     opacity: 0.8;
   }
+  
   
   
   

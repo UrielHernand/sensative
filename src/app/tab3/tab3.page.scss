@@ -19,3 +19,105 @@ ion-loading{
     background-clip: content-box;
     background-position: center;
 }
+
+  
+
+  
+  .help-container {
+    position: relative;
+    text-align: center;
+  }
+  
+  .help-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .help-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .help-icon {
+    display: inline-block;
+    line-height: 1;
+  }
+  
+  .help-text    {
+    position: absolute;
+    bottom: 50px;
+    right: 100px;
+    font-size: 14px;
+    color: #333;
+   
+   
+    animation: fadeOut 5s forwards;
+  }
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      display: none;
+    }
+  }
+  .my-custom-class {
+    --background: #f0f0f0;
+    --header-background: #007bff;
+    --header-color: #fff;
+    --button-color: #007bff;
+    --message-color: #333;
+  }
+  
+  .my-custom-class ion-header {
+    background-color: var(--header-background);
+    color: var(--header-color);
+  }
+  
+  .my-custom-class ion-button {
+    color: var(--button-color);
+  }
+  
+  .my-custom-class .alert-wrapper {
+    background-color: var(--background);
+    border-radius: 10px;
+  }
+  
+  .my-custom-class .alert-message {
+    color: var(--message-color);
+    text-align: justify;
+    font-size: 14px;
+    padding: 10px;
+  }
+  
+  
+
+  
+
+
+   
+
+
+  
+
+  
+  
+  
+
+ 
+
+ 
+  

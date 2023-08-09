@@ -10,9 +10,10 @@
 <div class="container">
 
  
-
+ 
 <div>
-  <ion-card color="dark">
+
+  <ion-card  style="background-color: white;">
     <ion-card-header class="card">
       <ion-card-title style="color: black">Última Medición</ion-card-title>
     </ion-card-header>
@@ -22,14 +23,19 @@
         <ion-icon name="heart-half-outline"></ion-icon>
         Ritmo Cardiaco
       </ion-button>
+     
     </ion-card-header>
+      
+ 
 
     <ion-card-content >
+    
       <div class="heart-container" *ngIf="transformRegistros && transformRegistros.length > 0" >
        
         <div class="heart"> <ion-icon name="heart-circle-outline"  class="icon-heart"></ion-icon></div>
         <h5 id="heart-rate"><br> <b>{{ transformRegistros[transformRegistros.length - 1].pulsos }}LPM</b></h5>
       </div>
+     
 
       <ion-card color="dark">
         <ion-card-header>
@@ -49,10 +55,11 @@
     </ion-card-content>
   </ion-card>
 
+   
 
 
 </div>
- 
+
 
 
 
