@@ -3,7 +3,7 @@ import { IonModal } from '@ionic/angular';
 import { OverlayEventDetail } from '@ionic/core/components';
 import { Router } from '@angular/router';
 import { ServiceService } from '../Service/service.service';
-import { AlertController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-tab3',
@@ -45,23 +45,11 @@ export class Tab3Page {
     this.obtenerFechaHoraActual();
    }
    async showHelp() {
-    const alert = await this.alertController.create({
-      header: 'Ayuda',
-      //quiero que el mensaje tenga estilos ya que no reconoce las etiquetas html
-
-      message: `
-      ¡Bienvenid@! Para una nueva medición de ritmo cardíaco, presione el botón "Nueva Medición", rellene los datos del formulario  y confirme ,  espere 60 segundos para obtener el resultado. ".
-    `,
-      
-      buttons: ['Cerrar'],
-      cssClass: 'my-custom-class'
-    });
-
-    await alert.present();
+    this.setOpen(true);
   }
   
 
-  constructor(private router: Router, private service:ServiceService, public alertController: AlertController) {
+  constructor(private router: Router, private service:ServiceService) {
 
     this.modal = this.modal;
     this.name=""
@@ -69,6 +57,8 @@ export class Tab3Page {
     this.opcionSeleccionada1 = '';
     this.fechaHoraActual=""
     this.obtenerFechaHoraActual();
+    this.setOpen(true);
+
     
   }                             
 
@@ -140,19 +130,19 @@ export class Tab3Page {
 
     switch (estadoAnimo) {
       case 'Feliz':
-        descripcion += ' Te sientes feliz.';
+        descripcion += ' Tú estado de  ánimo es feliz.';
         break;
       case 'Triste':
-        descripcion += ' Te sientes triste.';
+        descripcion += ' Tú estado de  ánimo es triste.';
         break;
       case 'Enojado':
-        descripcion += ' Te sientes enojado.';
+        descripcion += ' Tú estado de  ánimo es enojado.';
         break;
       case 'Ansioso':
-        descripcion += ' Te sientes ansioso.';
+        descripcion += ' Te sientes  esansioso.';
         break;
       case 'Neutral':
-        descripcion += ' Te sientes neutral.';
+        descripcion += ' Tú estado de  ánimo es neutral.';
         break;
       default:
         descripcion += ' No hay información adicional sobre el estado de ánimo.';
@@ -186,5 +176,13 @@ export class Tab3Page {
 
     this.fechaHoraActual = `${dia}/${mes}/${año} ${hora}:${minutos}`;
   } 
+
+  isModalOpen = false;
+
+  setOpen(isOpen: boolean) {
+    this.isModalOpen = isOpen;
+  }
+
+ 
 
 }

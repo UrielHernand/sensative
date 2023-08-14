@@ -1,4 +1,4 @@
-<ion-content >
+<ion-content>
   <!--   Titulo de último ckhekeo 
   2. Agregar Interacción que muestre lpm 
   3. Medición si es moderado o qué 
@@ -7,63 +7,74 @@
   6. Agregar un botton que muestrea agregar nueva medición 
   7. Popup -agregar nueva medición 
   8-Sección - medición -ver todas las mediciones anterirores -->
-<div class="container">
 
- 
- 
-<div>
-
-  <ion-card  style="background-color: white;">
-    <ion-card-header class="card">
-      <ion-card-title style="color: black">Última Medición</ion-card-title>
-    </ion-card-header>
-
-    <ion-card-header>
-      <ion-button color="danger" size="small">
-        <ion-icon name="heart-half-outline"></ion-icon>
-        Ritmo Cardiaco
-      </ion-button>
-     
-    </ion-card-header>
-      
- 
-
-    <ion-card-content >
-    
-      <div class="heart-container" *ngIf="transformRegistros && transformRegistros.length > 0" >
-       
-        <div class="heart"> <ion-icon name="heart-circle-outline"  class="icon-heart"></ion-icon></div>
-        <h5 id="heart-rate"><br> <b>{{ transformRegistros[transformRegistros.length - 1].pulsos }}LPM</b></h5>
-      </div>
-     
-
-      <ion-card color="dark">
-        <ion-card-header>
-           <b> {{ transformRegistros[transformRegistros.length - 1].nombre_paciente}}</b>
-          <ion-card-subtitle>Resultado: {{ transformRegistros[transformRegistros.length - 1].resultado }}</ion-card-subtitle>
+  <div class="container">
+    <div>
+      <ion-card style="background-color: white">
+        <ion-card-header class="card">
+          <ion-card-title style="color: black">
+            <ion-icon name="accessibility-outline"></ion-icon> Resultado <br />
+            <ion-icon name="heart-half-outline"></ion-icon> {{
+            transformRegistros[transformRegistros.length - 1].fecha_medicion }}
+          </ion-card-title>
         </ion-card-header>
-      
+
+        <ion-card-header>
+          <ion-button color="danger" size="small">
+            <ion-icon name="heart-half-outline"></ion-icon>
+            Ritmo Cardiaco
+          </ion-button>
+        </ion-card-header>
+
         <ion-card-content>
-        <b> {{ transformRegistros[transformRegistros.length - 1].fecha_medicion }}</b>
-          {{ transformRegistros[transformRegistros.length - 1].descripcion}}
-          
+          <div
+            class="heart-container"
+            *ngIf="transformRegistros && transformRegistros.length > 0"
+          >
+            <div class="heart">
+              <ion-icon
+                name="heart-circle-outline"
+                class="icon-heart"
+              ></ion-icon>
+            </div>
+            <h5 id="heart-rate">
+              <br />
+              <b
+                >{{ transformRegistros[transformRegistros.length - 1].pulsos
+                }}LPM</b
+              >
+            </h5>
+          </div>
+
+          <ion-card color="dark">
+            <ion-card-header>
+              <ion-item color="dark">
+                <ion-avatar slot="start">
+                  <img
+                    alt="Silhouette of a person's head"
+                    src="https://ionicframework.com/docs/img/demos/avatar.svg"
+                  />
+                </ion-avatar>
+                <ion-label>
+                  {{ transformRegistros[transformRegistros.length -
+                  1].nombre_paciente}}
+                </ion-label>
+              </ion-item>
+
+              <ion-card-subtitle
+                >Resultado: {{ transformRegistros[transformRegistros.length -
+                1].resultado }}</ion-card-subtitle
+              >
+            </ion-card-header>
+
+            <ion-card-content>
+              {{ transformRegistros[transformRegistros.length - 1].descripcion}}
+            </ion-card-content>
+          </ion-card>
+
+          <canvas #heartRateCanvas></canvas>
         </ion-card-content>
       </ion-card>
-      
-
-      <canvas #heartRateCanvas></canvas>
-    </ion-card-content>
-  </ion-card>
-
-   
-
-
-</div>
-
-
-
-
-
-
-</div>
+    </div>
+  </div>
 </ion-content>
